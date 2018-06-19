@@ -1,0 +1,3 @@
+#!/usr/bin/env bash
+
+echo This is supposed to run in OpenShift, not pure Docker.
