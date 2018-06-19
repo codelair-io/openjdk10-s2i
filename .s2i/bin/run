@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+
+if [ -z "${JAVA_OPTS}" ]; then
+  export JAVA_TOOLS_OPTIONS="-XX:+UseContainerSupport -XX:MaxRAMFraction=2 -XX:+ExplicitGCInvokesConcurrent -XX:+ClassUnloadingWithConcurrentMark -XX:+ExitOnOutOfMemoryError"
+fi
+
+cd /opt/app-root
+find . -type f -name \*.jar -exec java -jar {} \;
