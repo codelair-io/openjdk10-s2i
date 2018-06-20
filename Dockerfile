@@ -3,9 +3,9 @@ FROM openshift/base-centos7
 MAINTAINER Daniel Pfeifer <daniel@pfeifer.io>
 
 ENV JAVA_MAJOR_VERSION=10
-ENV AZUL_MINOR_VERSION=2+3
-ENV JAVA_MINOR_VERSION=0.1
-ENV JAVA_RPM_URL=https://cdn.azul.com/zulu/bin/zulu${JAVA_MAJOR_VERSION}.${AZUL_MINOR_VERSION}-jdk${JAVA_MAJOR_VERSION}.${JAVA_MINOR_VERSION}-linux.x86_64.rpm
+ENV AZUL_FULL_VERSION=${JAVA_MAJOR_VERSION}.2+3
+ENV JAVA_FULL_VERSION=${JAVA_MAJOR_VERSION}.0.1
+ENV JAVA_RPM_URL=https://cdn.azul.com/zulu/bin/zulu${AZUL_FULL_VERSION}-jdk${JAVA_FULL_VERSION}-linux.x86_64.rpm
 
 LABEL io.k8s.description="OpenJDK 10-based UberJAR-runner" \
     io.k8s.display-name="OpenJDK 10" \
